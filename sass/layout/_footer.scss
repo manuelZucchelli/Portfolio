@@ -1,0 +1,138 @@
+footer{
+    background-color: $grisOscuro;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    padding-left: 4%;
+    padding-right: 4%;
+    align-items: center;
+    position: relative;
+
+    &::before{
+        content: "";
+        position: absolute;
+        background-image: url(../img/circulos_mobil.png);
+        background-repeat: no-repeat;
+        background-size: auto;
+        pointer-events: none;
+        z-index: 1;
+        top: 398px;
+        left: -4.5%;
+        right: 0;
+        bottom: 0;
+    }
+
+    h3{
+        font-size: 40px;
+        line-height: 40px;
+        letter-spacing: -1.14px;
+        text-align: center;
+    }
+    
+    p{
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    form{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 50px;
+        gap: 5px;
+        input, textarea{
+            background-color: transparent;
+            border: none;
+            border-bottom: 1.5px solid #979797;
+            padding-left: 24px;
+            padding-bottom: 16px;
+            position: relative;
+            width: 100%;
+        }
+        
+        input:focus,
+        textarea:focus{
+            outline: none;
+            border-bottom: 1.5px solid $verde;
+        }
+
+        button{
+            margin-top: 32px;
+            margin-bottom: 86px;
+            width: fit-content;
+            align-self: flex-end;
+        }
+    }
+    hr{
+        width: 100%;
+    }
+
+    img{
+        margin-top: 39px;
+        margin-bottom: 60px;
+    }
+    
+    #redes2_f, #redes3_f{
+        display: none;
+    }
+}
+
+@include breakpoint(tablet){
+    footer{
+        .footer_container{
+            max-width: 57.942%;
+        }
+        #redes1_f,#redes3_f{
+            display: none;
+        }
+        #redes2_f{
+            display: block;
+        }
+    }
+}
+
+@include breakpoint(desktop){
+    footer{
+        width: 100%;
+        padding-left: 0%;
+        padding-right: 0%;
+        .footer_container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 220px;
+            width: 77.08%;
+            h3{
+                font-size: 88px;
+                line-height: 88px;
+                letter-spacing: -2.5px;
+                text-align: left;
+            }
+            p{
+                text-align: left;
+                font-size: 18px;
+                line-height: 28px;
+                margin-top: 36px;
+            }
+
+            form{
+                margin-top: 0px;
+            }
+        }
+
+        #redes1_f, #redes2_f{
+            display: none;
+        }
+        #redes3_f{
+            display: flex;
+            justify-content: space-between;
+            img{
+                margin-top: 47px;
+                margin-bottom: 92px;
+            }
+        }
+        hr, #redes3_f{
+            width: 77.08%;
+        }
+    }
+}

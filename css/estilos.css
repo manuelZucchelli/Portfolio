@@ -1,0 +1,610 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  font-family: "Space Grotesk";
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 2.29px;
+  border-bottom: 2px solid #4EE1A0;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #4EE1A0;
+}
+
+footer {
+  background-color: #242424;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  padding-left: 4%;
+  padding-right: 4%;
+  align-items: center;
+  position: relative;
+}
+footer::before {
+  content: "";
+  position: absolute;
+  background-image: url(../img/circulos_mobil.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  pointer-events: none;
+  z-index: 1;
+  top: 398px;
+  left: -4.5%;
+  right: 0;
+  bottom: 0;
+}
+footer h3 {
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: -1.14px;
+  text-align: center;
+}
+footer p {
+  text-align: center;
+  margin-top: 20px;
+}
+footer form {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 50px;
+  gap: 5px;
+}
+footer form input, footer form textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1.5px solid #979797;
+  padding-left: 24px;
+  padding-bottom: 16px;
+  position: relative;
+  width: 100%;
+}
+footer form input:focus,
+footer form textarea:focus {
+  outline: none;
+  border-bottom: 1.5px solid #4EE1A0;
+}
+footer form button {
+  margin-top: 32px;
+  margin-bottom: 86px;
+  width: fit-content;
+  align-self: flex-end;
+}
+footer hr {
+  width: 100%;
+}
+footer img {
+  margin-top: 39px;
+  margin-bottom: 60px;
+}
+footer #redes2_f, footer #redes3_f {
+  display: none;
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  footer .footer_container {
+    max-width: 57.942%;
+  }
+  footer #redes1_f, footer #redes3_f {
+    display: none;
+  }
+  footer #redes2_f {
+    display: block;
+  }
+}
+@media (max-width: 14400px) and (min-width: 1025px) {
+  footer {
+    width: 100%;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+  footer .footer_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 220px;
+    width: 77.08%;
+  }
+  footer .footer_container h3 {
+    font-size: 88px;
+    line-height: 88px;
+    letter-spacing: -2.5px;
+    text-align: left;
+  }
+  footer .footer_container p {
+    text-align: left;
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 36px;
+  }
+  footer .footer_container form {
+    margin-top: 0px;
+  }
+  footer #redes1_f, footer #redes2_f {
+    display: none;
+  }
+  footer #redes3_f {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer #redes3_f img {
+    margin-top: 47px;
+    margin-bottom: 92px;
+  }
+  footer hr, footer #redes3_f {
+    width: 77.08%;
+  }
+}
+header::before {
+  content: "";
+  position: absolute;
+  background-image: url(../img/circulos_mobil.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  pointer-events: none;
+  z-index: -1;
+  top: 124px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  background-image: url(../img/circulo_solo_paraTodo.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  width: 65px;
+  height: 129px;
+  pointer-events: none;
+  z-index: 1;
+  top: 254px;
+  right: 0px;
+  bottom: 0;
+}
+
+.img_header {
+  position: relative;
+  width: fit-content;
+  display: block;
+  left: 50%;
+  transform: translate(-50%, 20px);
+}
+.img_header .redes {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 20px);
+  z-index: 2;
+}
+.img_header #redes2, .img_header #redes3 {
+  display: none;
+}
+.img_header .fondo {
+  width: 173px;
+  display: block;
+  height: 345px;
+}
+.img_header .perfil {
+  width: 173px;
+  position: absolute;
+  top: 120px;
+}
+
+.presentacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-top: 49px;
+}
+.presentacion h1 {
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: -1.14;
+  text-align: center;
+}
+.presentacion h1 #uno, .presentacion h1 #tres {
+  display: none;
+}
+.presentacion h1 span {
+  box-shadow: inset 0px -4px 0 0px #4EE1A0;
+}
+.presentacion p {
+  margin-top: 24px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+}
+.presentacion .boton_header {
+  width: fit-content;
+  align-items: flex-start;
+  margin-top: 24px;
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  header {
+    position: relative;
+    grid-column-start: 2;
+    position: absolute;
+    background-image: url(../img/foto_perfil_tablet.png.png);
+    background-repeat: no-repeat;
+    background-size: 322px 600px;
+    height: 600px;
+    background-position: right;
+    pointer-events: none;
+    right: 0%;
+    left: 0%;
+    top: 0px;
+  }
+  header::after {
+    top: 370px;
+    right: 0%;
+  }
+  header::before {
+    top: 86px;
+    left: -4.2%;
+  }
+  header .img_header {
+    position: absolute;
+  }
+  header .img_header #redes1, header .img_header #redes3 {
+    display: none;
+  }
+  header .img_header img.fondo, header .img_header img.perfil {
+    display: none;
+  }
+  header .img_header #redes2 {
+    position: absolute;
+    display: block;
+    top: 0px;
+  }
+  header .presentacion {
+    margin-top: 151px;
+    max-width: 57.793%;
+    margin-left: 4.5%;
+    display: flex;
+    align-items: flex-start;
+  }
+  header .presentacion h1 {
+    text-align: left;
+    width: 100%;
+    font-size: 72px;
+    line-height: 72px;
+    letter-spacing: -2.05px;
+  }
+  header .presentacion h1 #dos {
+    display: none;
+  }
+  header .presentacion h1 #uno, header .presentacion h1 #tres {
+    display: inline;
+  }
+  header .presentacion h1 span {
+    box-shadow: inset 0px -7px 0 0px #4EE1A0;
+  }
+  header .presentacion p {
+    text-align: left;
+    margin-top: 69px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  header .presentacion .boton_header {
+    align-items: flex-start;
+    margin-top: 34px;
+  }
+}
+@media (max-width: 14400px) and (min-width: 1025px) {
+  header {
+    background-image: url(../img/fotto_perfil_desktop.png);
+    background-repeat: no-repeat;
+    background-size: 445px 720px;
+    height: 720px;
+    background-position: right;
+  }
+  header::before {
+    background-image: url(../img/circulos_desktop.svg);
+    top: 133px;
+  }
+  header::after {
+    background-image: url(../img/circulo_completo_desktop.svg);
+    right: 545px;
+    top: 521px;
+    width: 129px;
+  }
+  header .img_header {
+    width: 100%;
+    padding-top: 23px;
+  }
+  header .img_header #redes1 {
+    display: none;
+  }
+  header .img_header img.fondo, header .img_header img.perfil {
+    display: none;
+  }
+  header .img_header #redes3 {
+    display: flex;
+    justify-content: space-between;
+  }
+  header .img_header #redes3 #redes3_2 {
+    padding-right: 29.5px;
+  }
+  header .presentacion {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 147px;
+  }
+  header .presentacion h1 {
+    font-size: 88px;
+    line-height: 88px;
+    letter-spacing: -2.5px;
+    text-align: left;
+  }
+  header .presentacion h1 span {
+    box-shadow: inset 0px -6px 0 0px #4EE1A0;
+  }
+  header .presentacion p {
+    text-align: left;
+    max-width: 445px;
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 43px;
+  }
+  header .presentacion .boton_header {
+    margin-top: 66px;
+  }
+}
+main {
+  margin-top: 88px;
+  margin-bottom: 80px;
+  position: relative;
+  display: block;
+}
+main .habilidades::before {
+  content: "";
+  position: absolute;
+  background-image: url(../img/circulos_mobil.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  pointer-events: none;
+  z-index: -1;
+  top: 540px;
+  left: 0;
+  right: -4.5%;
+  bottom: 0;
+  transform: scaleX(-1);
+}
+main .habilidades {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+}
+main .habilidades .habilidad1 {
+  margin-top: 40px;
+}
+main .habilidades .ultimo {
+  margin-bottom: 40px;
+}
+main .habilidades h3 {
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -1;
+}
+main .habilidades p {
+  font-size: 16px;
+  line-height: 26px;
+}
+main .inicio_proyectos {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+main .inicio_proyectos h3 {
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: -1.14;
+}
+main .proyectos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+main .proyectos > :first-child {
+  margin-top: 40px;
+}
+main .proyectos img {
+  margin-bottom: 20px;
+}
+main .proyectos h5 {
+  font-size: 24px;
+}
+main .proyectos .lenguajes {
+  display: flex;
+  gap: 19px;
+  margin-top: 7px;
+  margin-bottom: 20px;
+}
+main .proyectos button {
+  margin-right: 20px;
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  main {
+    margin-top: 660px;
+  }
+  main .hr {
+    display: none;
+  }
+  main .habilidades {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+    gap: 52px;
+    margin-top: 52px;
+  }
+  main .habilidades::before {
+    top: 381px;
+  }
+  main .habilidades .habilidad1 {
+    margin-top: auto;
+  }
+  main .habilidades h3 {
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -1.5px;
+  }
+  main .habilidades p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  main .inicio_proyectos {
+    align-items: center;
+  }
+  main .inicio_proyectos h3 {
+    font-size: 72px;
+    line-height: 72px;
+    letter-spacing: -2.05px;
+  }
+  main .inicio_proyectos button {
+    height: 38px;
+  }
+  main .proyectos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 60px;
+  }
+  main .proyectos > :first-child {
+    margin-top: auto;
+  }
+  main .proyectos img {
+    width: 342px;
+  }
+}
+@media (max-width: 14400px) and (min-width: 1025px) {
+  main {
+    margin-top: 104px;
+  }
+  main .hr {
+    display: none;
+  }
+  main .habilidades {
+    margin-top: 72px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: left;
+  }
+  main .habilidades h3 {
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -1.5px;
+  }
+  main .habilidades p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  main .habilidades::before {
+    background-image: url(../img/circulos_tablet.svg.svg);
+    position: absolute;
+    right: -16%;
+    top: 253px;
+  }
+  main .inicio_proyectos {
+    align-items: center;
+    margin-top: 140px;
+  }
+  main .inicio_proyectos h3 {
+    font-size: 88px;
+    line-height: 88px;
+    letter-spacing: -2.5px;
+  }
+  main .inicio_proyectos button {
+    height: 38px;
+  }
+  main .proyectos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 69px;
+    column-gap: 30px;
+    margin-top: 60px;
+    width: 100%;
+  }
+  main .proyectos > :first-child {
+    margin-top: auto;
+  }
+  main .proyectos article {
+    position: relative;
+  }
+  main .proyectos article img {
+    width: 100%;
+    position: relative;
+  }
+  main .proyectos article:hover img {
+    filter: brightness(20%);
+  }
+  main .proyectos article:hover .botones {
+    display: flex;
+    gap: 48px;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    top: 40.025%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  main .proyectos article:hover .botones button {
+    margin-right: 0px;
+    width: fit-content;
+  }
+  main .proyectos article .lenguajes {
+    margin-bottom: 0px;
+  }
+  main .proyectos article .botones {
+    display: none;
+  }
+}
+html * {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #151515;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.principal {
+  width: 92%;
+}
+
+p {
+  color: #D9D9D9;
+}
+
+@media (max-width: 14400px) and (min-width: 1025px) {
+  .principal {
+    width: 77.08%;
+  }
+}
+
+/*# sourceMappingURL=estilos.css.map */

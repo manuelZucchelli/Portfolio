@@ -1,0 +1,26 @@
+html * {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+ 
+body {
+    overflow-x: hidden;
+    background-color: $negro;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+.principal{
+    width: 92%;
+}
+
+p{
+    color: $gris;
+}
+
+@include breakpoint(desktop){
+    .principal{
+        width: 77.08%;
+    }
+}

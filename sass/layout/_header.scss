@@ -1,0 +1,237 @@
+
+header::before{
+    content: "";
+    position: absolute;
+    background-image: url(../img/circulos_mobil.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    pointer-events: none;
+    z-index: -1;
+    top: 124px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+header::after{
+    content: "";
+    position: absolute;
+    background-image: url(../img/circulo_solo_paraTodo.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    width: 65px;
+    height: 129px;
+    pointer-events: none;
+    z-index: 1;
+    top: 254px;
+    right: 0px;
+    bottom: 0;
+}
+
+.img_header{
+    position: relative;
+    width: fit-content;
+    display: block;
+    left: 50%;
+    transform: translate(-50%, 20px);
+
+    .redes{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 20px);
+        z-index: 2;
+    }
+
+    #redes2, #redes3{
+        display: none;
+    }
+
+    .fondo{
+        width: 173px;
+        display: block;
+        height: 345px;
+    }
+
+    .perfil{
+        width: 173px;
+        position: absolute;
+        top: 120px;
+    }
+}
+
+
+.presentacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 49px;
+    h1{
+        font-size: 40px;
+        line-height: 40px;
+        letter-spacing: -1.14;
+        text-align: center;
+        #uno, #tres{
+            display: none;
+        }
+        span{
+            box-shadow: inset 0px -4px 0 0px $verde;
+        }
+    }
+    p{
+        margin-top: 24px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        text-align: center;
+    }
+    .boton_header{
+        width: fit-content;
+        align-items: flex-start;
+        margin-top: 24px;
+    }
+}
+
+
+@include breakpoint(tablet){
+    header{
+        position: relative;
+
+        &::after{
+            top: 370px;
+            right: 0%;
+        }
+        &::before{
+            top: 86px;
+            left: -4.2%;
+        }
+        
+        grid-column-start: 2; 
+        position: absolute;
+        background-image: url(../img/foto_perfil_tablet.png.png);
+        background-repeat: no-repeat;
+        background-size: 322px 600px;
+        height: 600px;
+        background-position: right;
+        pointer-events: none;
+        right: 0%;
+        left: 0%;
+        top: 0px;
+
+        .img_header{
+            position: absolute;
+            #redes1, #redes3{
+                display: none;
+            }
+            img.fondo, img.perfil{
+                display: none;
+            }
+            #redes2{
+                position: absolute;
+                display: block;
+                top: 0px;
+            }
+        }
+
+        .presentacion{
+            margin-top: 151px;
+            max-width: 57.793%;
+            margin-left: 4.5%;
+            display: flex;
+            align-items: flex-start;
+            h1{
+                text-align: left;
+                width: 100%;
+                font-size: 72px;
+                line-height: 72px;
+                letter-spacing: -2.05px;
+                #dos{
+                    display: none;
+                }
+                #uno, #tres{
+                    display: inline;
+                }
+                span{
+                    box-shadow: inset 0px -7px 0 0px $verde;
+                }
+            }
+            p{
+                text-align: left;
+                margin-top: 69px;
+                font-size: 18px;
+                line-height: 28px;
+            }
+            .boton_header{
+                align-items: flex-start;
+                margin-top: 34px;
+            }
+        }
+        
+    }
+}
+
+@include breakpoint(desktop){
+    header{
+        &::before{
+            background-image: url(../img/circulos_desktop.svg);
+            top: 133px;
+        }
+        &::after{
+            background-image: url(../img/circulo_completo_desktop.svg);
+            right: 545px;
+            top: 521px;
+            width: 129px;
+        }
+
+        .img_header{
+            width: 100%;
+            padding-top: 23px;
+            #redes1{
+                display: none;
+            }
+            img.fondo, img.perfil{
+                display: none;
+            }
+            #redes3{
+                display: flex;
+                justify-content: space-between;
+                #redes3_2{
+                    padding-right: 29.5px;
+                }
+            }
+        }
+    
+        background-image: url(../img/fotto_perfil_desktop.png);
+        background-repeat: no-repeat;
+        background-size: 445px 720px;
+        height: 720px;
+        background-position: right;
+
+    
+        .presentacion{
+            display: flex;
+            align-items: flex-start;
+            margin-top: 147px;
+            h1{
+                font-size: 88px;
+                line-height: 88px;
+                letter-spacing: -2.5px;
+                text-align: left;
+                span{
+                    box-shadow: inset 0px -6px 0 0px #4EE1A0;
+                }
+            }
+            p{
+                text-align: left;
+                max-width: 445px;
+                font-size: 18px;
+                line-height: 28px;
+                margin-top: 43px;
+            }
+            .boton_header{
+                margin-top: 66px;
+            }
+        }
+
+    }
+}
